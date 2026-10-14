@@ -3,7 +3,7 @@
 A modern, cross-distribution Linux desktop application and background service for managing battery charging thresholds, conservation modes, and real-time battery health on Lenovo laptops.
 
 Supported Lenovo laptop families:
-- **Lenovo IdeaPad** (IdeaPad 3, 5, 300-series, 500-series, Slim, Flex, Yoga IdeaPad)
+- **Lenovo IdeaPad** (IdeaPad 3, 5, 300-series, 500-series, 700-series, E41-series (Supported model only) Slim, Flex, Yoga IdeaPad)
 - **Lenovo ThinkPad** (X1, T-series, P-series, E-series, L-series)
 - **Lenovo IdeaPad Gaming**
 - **Lenovo LOQ**
