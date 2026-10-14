@@ -1,0 +1,5 @@
+# Core runtime dependencies
+PySide6>=6.4.0
+
+# Optional development & test suite dependencies
+pytest>=7.0.0

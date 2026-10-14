@@ -1,0 +1,5 @@
+bin/lenovo-conservation-helper usr/libexec/
+data/lenovo-conservation.desktop usr/share/applications/
+data/icons/lenovo-conservation.svg usr/share/icons/hicolor/scalable/apps/
+data/org.lenovo.conservation.policy usr/share/polkit-1/actions/
+data/lenovo-conservation.service lib/systemd/system/

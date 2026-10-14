@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Lenovo Battery Monitor
+GenericName=Battery & Conservation Monitor
+Comment=Manage battery health, charging thresholds, and conservation mode for Lenovo laptops
+Exec=lenovo-battery-monitor
+Icon=lenovo-battery-monitor
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;System;
+Keywords=battery;health;lenovo;conservation;charge;threshold;ideapad;thinkpad;legion;loq;monitor;capacity;power;
+StartupNotify=true
+StartupWMClass=lenovo-battery-monitor
+X-KDE-SubstituteUID=false

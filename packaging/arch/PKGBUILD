@@ -1,0 +1,36 @@
+# Maintainer: Lenovo Conservation Contributors <contact@lenovo-conservation.org>
+pkgname=lenovo-conservation
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Cross-distribution Lenovo battery conservation mode and charge threshold manager"
+arch=('any')
+url="https://github.com/lenovo-conservation/lenovo-conservation"
+license=('GPL3')
+depends=('python' 'pyside6' 'polkit')
+makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools')
+optdepends=(
+    'systemd: for automatic background service management'
+    'kreadconfig6: for native KDE Plasma theme integration'
+)
+backup=()
+source=("$pkgname-$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+    cd "$srcdir/$pkgname-$pkgver"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+    python -m installer --destdir="$pkgdir" dist/*.whl
+
+    # Install desktop file, icon, polkit policy, and systemd service
+    install -Dm644 data/lenovo-conservation.desktop "$pkgdir/usr/share/applications/lenovo-conservation.desktop"
+    install -Dm644 data/icons/lenovo-conservation.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/lenovo-conservation.svg"
+    install -Dm644 data/org.lenovo.conservation.policy "$pkgdir/usr/share/polkit-1/actions/org.lenovo.conservation.policy"
+    install -Dm644 data/lenovo-conservation.service "$pkgdir/usr/lib/systemd/system/lenovo-conservation.service"
+
+    # Install privileged helper in libexec
+    install -Dm755 bin/lenovo-conservation-helper "$pkgdir/usr/libexec/lenovo-conservation-helper"
+}

@@ -1,0 +1,17 @@
+[Unit]
+Description=Lenovo Battery Conservation & Smart 80% Background Service
+Documentation=https://github.com/lenovo-conservation/lenovo-conservation
+After=multi-user.target power-profiles-daemon.service upower.service
+Wants=upower.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/lenovo-conservation-daemon --daemon
+Restart=on-failure
+RestartSec=5s
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/var/lib/lenovo-conservation /run/lenovo-conservation /sys/bus/platform/drivers/ideapad_acpi /sys/devices/platform /sys/class/power_supply
+
+[Install]
+WantedBy=multi-user.target

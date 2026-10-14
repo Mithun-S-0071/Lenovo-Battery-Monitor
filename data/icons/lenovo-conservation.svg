@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2229"/>
+      <stop offset="100%" stop-color="#0f1115"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3daee9"/>
+      <stop offset="100%" stop-color="#1f80b8"/>
+    </linearGradient>
+    <linearGradient id="batFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#27ae60"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#bgGrad)" stroke="#31363b" stroke-width="2"/>
+
+  <!-- Battery Terminal -->
+  <rect x="52" y="22" width="24" height="6" rx="3" fill="#7f8c8d"/>
+
+  <!-- Battery Body Outline -->
+  <rect x="30" y="28" width="68" height="74" rx="12" fill="#232629" stroke="#7f8c8d" stroke-width="4"/>
+
+  <!-- Conservation 80% Level Indicator Fill -->
+  <rect x="36" y="44" width="56" height="52" rx="6" fill="url(#batFill)"/>
+
+  <!-- 80% Limit Line / Threshold Notch -->
+  <line x1="32" y1="44" x2="96" y2="44" stroke="#f1c40f" stroke-width="3" stroke-dasharray="4,2"/>
+
+  <!-- Conservation Shield Badge overlay -->
+  <g transform="translate(68, 68)" filter="url(#glow)">
+    <circle cx="24" cy="24" r="26" fill="#1b2838" stroke="#3daee9" stroke-width="3"/>
+    <!-- Protection Shield Icon -->
+    <path d="M24 10 L37 15 C37 26 31 34 24 38 C17 34 11 26 11 15 Z" fill="url(#shieldGrad)"/>
+    <!-- Lightning Check inside shield -->
+    <path d="M24 16 L20 25 L24 25 L23 32 L28 23 L24 23 Z" fill="#ffffff"/>
+  </g>
+</svg>

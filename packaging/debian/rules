@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME = lenovo-conservation
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	install -Dm755 bin/lenovo-conservation-helper debian/lenovo-conservation/usr/libexec/lenovo-conservation-helper
+	install -Dm644 data/lenovo-conservation.desktop debian/lenovo-conservation/usr/share/applications/lenovo-conservation.desktop
+	install -Dm644 data/icons/lenovo-conservation.svg debian/lenovo-conservation/usr/share/icons/hicolor/scalable/apps/lenovo-conservation.svg
+	install -Dm644 data/org.lenovo.conservation.policy debian/lenovo-conservation/usr/share/polkit-1/actions/org.lenovo.conservation.policy
+	install -Dm644 data/lenovo-conservation.service debian/lenovo-conservation/lib/systemd/system/lenovo-conservation.service
