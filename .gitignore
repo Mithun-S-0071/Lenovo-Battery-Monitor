@@ -32,4 +32,5 @@ htmlcov/
 screenshot_*.png
 
 # Built release packages
-release/
+release/dist/
+

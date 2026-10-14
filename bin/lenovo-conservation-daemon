@@ -4,10 +4,17 @@
 import os
 import sys
 
-# Ensure project root is in sys.path when running from source checkout
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+# Ensure project root or install location is in sys.path
+search_paths = [
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..")),
+    "/opt/lenovo-conservation",
+    "/usr/local/share/lenovo-conservation",
+    "/usr/share/lenovo-conservation",
+    os.path.expanduser("~/.local/share/lenovo-conservation"),
+]
+for p in search_paths:
+    if os.path.isdir(p) and p not in sys.path:
+        sys.path.insert(0, p)
 
 from lenovo_conservation.service import main_service
 

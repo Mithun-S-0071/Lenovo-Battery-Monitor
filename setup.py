@@ -8,6 +8,9 @@ setup(
     author="Lenovo Conservation Contributors",
     packages=find_packages(),
     include_package_data=True,
+    install_requires=[
+        "PySide6>=6.4.0",
+    ],
     entry_points={
         "console_scripts": [
             "lenovo-battery-monitor = lenovo_conservation.main:main",

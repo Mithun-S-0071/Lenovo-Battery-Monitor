@@ -27,10 +27,11 @@ dependencies = [
 ]
 
 [project.scripts]
+lenovo-battery-monitor = "lenovo_conservation.main:main"
 lenovo-conservation = "lenovo_conservation.main:main"
 lenovo-conservation-daemon = "lenovo_conservation.service:main_service"
 lenovo-conservation-helper = "lenovo_conservation.privileged_helper:main_helper"
 
 [project.urls]
-"Homepage" = "https://github.com/lenovo-conservation/lenovo-conservation"
-"Bug Tracker" = "https://github.com/lenovo-conservation/lenovo-conservation/issues"
+"Homepage" = "https://github.com/Mithun-S-0071/Lenovo-Battery-Monitor"
+"Bug Tracker" = "https://github.com/Mithun-S-0071/Lenovo-Battery-Monitor/issues"

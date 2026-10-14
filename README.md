@@ -72,27 +72,32 @@ Works across major Linux distributions: **Arch Linux**, **SteamOS**, **Fedora**,
 
 ## Installation
 
-### Quick User-Local Installation (No Root Required)
+### 🚀 Quick Clone & Install (Recommended)
+
+Simply clone and run the installer:
 
 ```bash
-# Run installer from repo root:
-./release/install.sh
+git clone https://github.com/Mithun-S-0071/Lenovo-Battery-Monitor.git
+cd Lenovo-Battery-Monitor
+./install.sh
 ```
-This installs the launcher into `~/.local/bin/lenovo-battery-monitor`, registers desktop shortcuts with KDE Plasma / GNOME, and refreshes system caches.
 
-### System-Wide Installation
+- **Interactive / Standard**: `./install.sh` (checks dependencies, sets up desktop menu and icons)
+- **System-Wide (Recommended for Polkit elevation & system service)**:
+  ```bash
+  sudo ./install.sh --system
+  ```
+- **User-Local (No root / sudo required)**:
+  ```bash
+  ./install.sh --user
+  ```
 
+To uninstall at any time:
 ```bash
-sudo ./release/install.sh --system
+./uninstall.sh
 ```
 
-### Installation by Distribution
-
-See [release/INSTALL.md](release/INSTALL.md) for full instructions covering:
-- **Arch Linux / SteamOS**: `makepkg -si` via `packaging/arch/PKGBUILD`
-- **Fedora / RHEL / CentOS**: RPM build via `packaging/rpm/lenovo-conservation.spec`
-- **Ubuntu / Debian / Linux Mint**: DEB package via `packaging/debian/`
-- **openSUSE**: Native installer or zypper setup
+See [INSTALL.md](INSTALL.md) for full instructions covering native distribution packages (`.deb`, `.rpm`, `PKGBUILD`).
 
 ---
 

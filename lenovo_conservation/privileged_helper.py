@@ -91,6 +91,9 @@ class PrivilegedHelper:
             "/usr/libexec/lenovo-conservation-helper",
             "/usr/lib/lenovo-conservation/lenovo-conservation-helper",
             "/usr/local/libexec/lenovo-conservation-helper",
+            # User-local installed location
+            os.path.expanduser("~/.local/share/lenovo-conservation/bin/lenovo-conservation-helper"),
+            os.path.expanduser("~/.local/bin/lenovo-conservation-helper"),
             # Project local location
             os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "bin", "lenovo-conservation-helper")),
         ]
