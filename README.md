@@ -13,6 +13,25 @@ Works across major Linux distributions: **Arch Linux**, **SteamOS**, **Fedora**,
 
 ---
 
+## Screenshots
+
+### 1. Real-Time Battery Health & Power Metrics
+Probes genuine hardware telemetry including design capacity, full charge capacity, power rate, and battery degradation:
+
+![Battery Health & Power Metrics](Screenshot_20261014_200039.png)
+
+### 2. Battery Conservation & Charging Profiles
+Genuine hardware capability detection for IdeaPad, ThinkPad, LOQ, and Legion laptops:
+
+![Battery Conservation Mode](Screenshot_20261014_201102.png)
+
+### 3. Smart 80% Software Controller & Settings
+Configurable upper and lower hysteresis charging thresholds and background daemon status:
+
+![Settings and Smart 80% Controller](Screenshot_20261014_201225.png)
+
+---
+
 ## Key Features
 
 - **Genuine Hardware Battery Health Probing (Not Simulated/Default Values)**:

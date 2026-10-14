@@ -29,7 +29,6 @@ htmlcov/
 # Temporary runtime files
 *.tmp*
 *.pid
-screenshot_*.png
 
 # Built release packages
 release/dist/
