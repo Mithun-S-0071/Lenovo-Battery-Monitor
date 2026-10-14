@@ -24,7 +24,7 @@ cd Lenovo-Battery-Monitor
   ```
 
 
-## 1. Arch Linux / SteamOS / Manjaro
+## 1. Arch Based
 
 ### Prerequisites
 Install PySide6 and Polkit:
@@ -49,7 +49,7 @@ sudo ./install.sh --system
 
 ---
 
-## 2. Fedora / RHEL / CentOS Stream
+## 2. Fedora Based
 
 ### Prerequisites
 Install Python 3, PySide6, and Polkit:
@@ -74,7 +74,7 @@ sudo ./install.sh --system
 
 ---
 
-## 3. Ubuntu / Debian / Linux Mint / Pop!_OS / Kali Linux
+## 3. Debian Based
 
 ### Prerequisites
 Install Python 3, PySide6 Widgets, and PolicyKit:
