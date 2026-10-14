@@ -4,7 +4,7 @@ This guide provides system requirements and step-by-step instructions to install
 
 ---
 
-## 🚀 Fast Track: Clone & Install (Recommended)
+## Fast Track: Clone & Install (Recommended)
 
 The simplest and quickest way to install is directly from the source repository:
 
