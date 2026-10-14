@@ -74,7 +74,7 @@ sudo ./install.sh --system
 
 ---
 
-## 3. Ubuntu / Debian / Linux Mint / Pop!_OS
+## 3. Ubuntu / Debian / Linux Mint / Pop!_OS / Kali Linux
 
 ### Prerequisites
 Install Python 3, PySide6 Widgets, and PolicyKit:
