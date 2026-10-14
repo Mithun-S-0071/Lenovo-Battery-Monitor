@@ -72,7 +72,7 @@ Works across major Linux distributions: **Arch Linux**, **SteamOS**, **Fedora**,
 
 ## Installation
 
-### 🚀 Quick Clone & Install (Recommended)
+### Quick Clone & Install (Recommended)
 
 Simply clone and run the installer:
 
